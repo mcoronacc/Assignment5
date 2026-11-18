@@ -8,6 +8,7 @@ def create(db: Session, recipe):
         resource_id=recipe.resource_id,
         amount=recipe.amount
     )
+
     db.add(db_recipe)
     db.commit()
     db.refresh(db_recipe)

@@ -7,6 +7,7 @@ def create(db: Session, resource):
         item = resource.item,
         amount = resource.amount,
     )
+
     db.add(db_resource)
     db.commit()
     db.refresh(db_resource)
